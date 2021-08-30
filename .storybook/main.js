@@ -5,3 +5,7 @@ module.exports = {
     builder: "webpack5",
   },
 };
+
+// exposes: {
+//   './components': './src/components/index.ts',
+// }
