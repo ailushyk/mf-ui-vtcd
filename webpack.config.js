@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const mfConfig = require('./mf.config.json');
 
 const deps = require('./package.json').dependencies;
 module.exports = (env, argv) => {
@@ -59,12 +60,8 @@ module.exports = (env, argv) => {
       new ModuleFederationPlugin({
         name: 'uivtcd',
         filename: 'remoteEntry.js',
-        remotes: {},
-        exposes: {
-          './elements': './src/elements/index.ts',
-          './components': './src/components/index.ts',
-          './pages': './src/pages/index.ts',
-        },
+        exposes: { ...mfConfig.exposes },
+        remotes: { ...mfConfig.remotes },
         shared: {
           ...deps,
           react: {
