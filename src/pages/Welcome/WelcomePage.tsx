@@ -9,10 +9,16 @@ export interface WelcomeProps {
   items: string[];
 }
 
-export const WelcomePage: FC<WelcomeProps> = ({ header, items }) => (
+const items = [
+  'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+  'Animi, architecto assumenda autem dicta ducimus esse inventore ipsa maxime minima.',
+  'Numquam obcaecati quam ratione reiciendis repellendus sunt tempore?',
+];
+
+const WelcomePage: FC<WelcomeProps> = ({ header }) => (
   <Layout header={header}>
     <Container maxW={'xs'}>
-      {items.map((item) => (
+      {items?.map((item) => (
         <HStack alignItems={'start'} mb={'6'}>
           <StarIcon mr={'2'} h={'10'} />
           <Space>{item}</Space>
@@ -26,3 +32,5 @@ export const WelcomePage: FC<WelcomeProps> = ({ header, items }) => (
     </Space>
   </Layout>
 );
+
+export default WelcomePage;

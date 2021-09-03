@@ -1,5 +1,5 @@
-import { WelcomePage, WelcomeProps } from './WelcomePage';
 import { Story } from '@storybook/react';
+import WelcomePage, { WelcomeProps } from './WelcomePage';
 
 export default {
   component: WelcomePage,
