@@ -1,7 +1,7 @@
 import { Box, Button, Link, Text } from '@chakra-ui/react';
 import React, { FC } from 'react';
 import { Link as RLink } from 'react-router-dom';
-import { Action } from '../elements';
+import { Action } from '../../elements';
 
 const NotFound: FC = () => {
   return (

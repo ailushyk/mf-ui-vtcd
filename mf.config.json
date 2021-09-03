@@ -1,9 +1,10 @@
 {
   "exposes": {
-    "./elements": "./src/elements/index.ts",
     "./components": "./src/components/index.ts",
+    "./elements": "./src/elements/index.ts",
     "./pages": "./src/pages/index.ts",
-    "./NotFound": "./src/pages/NotFound.tsx"
+    "./pages/NotFound": "./src/pages/NotFound/NotFound.tsx",
+    "./pages/WelcomePage": "./src/pages/Welcome/WelcomePage.tsx"
   },
   "remotes": {}
 }
