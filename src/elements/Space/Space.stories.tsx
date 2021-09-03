@@ -17,3 +17,10 @@ Primary.args = {
   m: 4,
   p: 4,
 };
+
+export const FlexSpace: Story = (args) => <Space {...args}>Space</Space>;
+FlexSpace.args = {
+  m: 4,
+  p: 4,
+  flex: true,
+};

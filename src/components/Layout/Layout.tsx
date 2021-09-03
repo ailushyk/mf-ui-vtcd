@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import { Container, VStack } from '@chakra-ui/react';
-import { Header } from '../Header/Header';
-import { Space } from '../../elements';
+import { Center, Container, VStack } from '@chakra-ui/react';
+import { Space, Text } from '../../elements';
 
 export interface LayoutProps {
   header?: string;
@@ -11,11 +10,17 @@ export const Layout: FC<LayoutProps> = ({ header, children }) => (
   <VStack>
     {header ? (
       <Container maxW="container.sm">
-        <Header>{header}</Header>
+        <Space color={'white'} bg={'#1A365D'} p={6}>
+          <Center>
+            <Text size={'lg'} transform={'uppercase'} bold>
+              {header}
+            </Text>
+          </Center>
+        </Space>
       </Container>
     ) : null}
 
-    <Container maxW="container.sm">
+    <Container maxW="container.sm" colorScheme={'red'}>
       <Space p={5}>{children}</Space>
     </Container>
   </VStack>
