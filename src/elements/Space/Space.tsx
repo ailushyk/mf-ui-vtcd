@@ -2,9 +2,12 @@ import React, { FC } from 'react';
 import { Box } from '@chakra-ui/react';
 
 export interface SpaceProps {
-  value?: string;
+  p?: string | number;
+  m?: string;
+  color?: string;
+  bg?: string;
 }
 
-export const Space: FC<SpaceProps> = ({ children }) => {
-  return <Box>{children}</Box>;
+export const Space: FC<SpaceProps> = ({ children, ...props }) => {
+  return <Box {...props}>{children}</Box>;
 };
